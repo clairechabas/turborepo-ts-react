@@ -1,0 +1,13 @@
+{
+    "name": "@base/utils-ts",
+    "version": "0.0.0",
+    "type": "module",
+    "private": true,
+    "main": "src/index.ts",
+    "scripts": {
+        "types-check": "tsc --noEmit"
+    },
+    "devDependencies": {
+        "@base/config-ts": "workspace:*"
+    }
+}
