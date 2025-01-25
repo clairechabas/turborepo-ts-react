@@ -1,0 +1,15 @@
+name: 'Install Node and deps'
+description: 'Install Node.js and dependencies using pnpm'
+runs:
+    using: 'composite'
+    steps:
+        - name: Setup pnpm
+          uses: pnpm/action-setup@v4
+        - name: Setup Node.js
+          uses: useblacksmith/setup-node@v5
+          with:
+              node-version-file: .nvmrc
+              cache: pnpm
+        - name: Install dependencies
+          shell: bash
+          run: pnpm install --frozen-lockfile
