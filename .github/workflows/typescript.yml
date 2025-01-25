@@ -1,0 +1,32 @@
+name: TypeScript
+
+on:
+    pull_request:
+    push:
+        branches:
+            - main
+
+concurrency:
+    group: ${{ github.ref }}-typescript
+    cancel-in-progress: true
+
+jobs:
+    type-check:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v3
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '22'
+
+            - name: Install dependencies
+              run: |
+                  pnpm install
+
+            - name: Run TypeScript type check
+              run: |
+                  npx tsc --noEmit
