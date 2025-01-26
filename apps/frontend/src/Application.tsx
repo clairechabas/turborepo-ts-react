@@ -4,7 +4,6 @@ import { Button } from '@base/ui/button';
 
 export default function Application() {
     const [count, setCount] = React.useState(0);
-    console.log(button);
 
     return (
         <>
