@@ -1,9 +1,10 @@
 import * as React from 'react';
 import './App.css';
-// import { Button } from '@base/ui/button';
+import { Button } from '@base/ui/button';
 
 export default function Application() {
     const [count, setCount] = React.useState(0);
+    console.log(button);
 
     return (
         <>
