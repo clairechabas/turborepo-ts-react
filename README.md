@@ -2,7 +2,7 @@
 
 This is a minimal [Turborepo](https://turbo.build/repo/docs) starter set up to build a monorepo application with TypeScript.
 
-It's built to be the most simple base possible to start building with your tools of choice. Very little decisions were made to let you setup your own tools. As such it includes a single app which is a React app built with Vite and a single package to start building a component library.
+It's built to be the most simple base possible to start building with your tools of choice. Very little decisions were made to let you setup your own tools. As such it includes a single app which is a React app built with Vite and simple packages to help kickstart your project faster.
 
 ## 🚀 Get started
 
@@ -18,12 +18,16 @@ and run the development server:
 pnpm dev
 ```
 
-## 📦 What's inside?
+## 📦 Apps & packages
 
-- `frontend`: a React application built with [Vite](https://vite.dev/)
-- `@base/ui`: a starter package for a React component library
-- `@base/config-eslint`: `eslint` config
-- `@base/config-ts`: `tsconfig.json` used throughout the monorepo
+This project includes two main folders:
+- `apps`: applications to be deployed and consumed
+    - `frontend`: a React application built with [Vite](https://vite.dev/)
+- `packages`: development packages used to build the applications in `apps`
+    - `@base/config-eslint`: `eslint` config
+    - `@base/config-ts`: `tsconfig.json` used throughout the monorepo
+    - `@base/ui`: a starter package for a React component library
+    - `@base/utils-ts`: a library of TS utilities
 
 ### 🧰 Tools
 
@@ -33,6 +37,7 @@ This project is set up to work with:
 - [pnpm](https://pnpm.io/fr/) for package management
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
+- [GitHub Actions](https://github.com/features/actions) for CI workflows
 
 ## 📚 Going further with Turborepo
 
