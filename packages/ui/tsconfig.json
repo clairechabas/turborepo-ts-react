@@ -4,6 +4,9 @@
         "outDir": "dist",
         "jsx": "react-jsx"
     },
+    "scripts": {
+        "types-check": "tsc --noEmit"
+    },
     "include": ["src"],
     "exclude": ["node_modules", "dist"]
 }

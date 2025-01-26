@@ -1,3 +1,6 @@
 {
-    "extends": "@base/config-ts/base.strict.json"
+    "extends": "@base/config-ts/base.strict.json",
+    "scripts": {
+        "types-check": "tsc --noEmit"
+    }
 }
