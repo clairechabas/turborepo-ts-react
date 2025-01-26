@@ -19,7 +19,7 @@ jobs:
               uses: actions/checkout@v3
 
             - name: Setup Node.js and dependencies
-              uses: ./.github/composite/setup-node-and-deps
+              uses: ./.github/action
 
             - name: Run TypeScript type check
               run: |

@@ -1,5 +1,7 @@
 name: 'Install Node and deps'
+
 description: 'Install Node.js and dependencies using pnpm'
+
 runs:
     using: 'composite'
     steps:
