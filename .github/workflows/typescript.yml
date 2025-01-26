@@ -24,4 +24,4 @@ jobs:
               uses: ./.github/actions/setup-node-and-deps
 
             - name: Run TypeScript type check
-              run: pnpm turbo run build --filter=...
+              run: pnpm turbo run types-check
