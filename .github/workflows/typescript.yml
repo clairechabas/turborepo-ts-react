@@ -1,8 +1,10 @@
 name: TypeScript
 
 on:
-    pull_request:
     push:
+        branches:
+            - main
+    pull_request:
         branches:
             - main
 
@@ -18,15 +20,8 @@ jobs:
             - name: Check out repository
               uses: actions/checkout@v3
 
-            - name: Set up Node.js
-              uses: actions/setup-node@v3
-              with:
-                  node-version: '22'
-
-            - name: Install dependencies
-              run: |
-                  pnpm install
+            - name: Setup Node.js and dependencies
+              uses: ./.github/actions/setup-node-and-deps
 
             - name: Run TypeScript type check
-              run: |
-                  npx tsc --noEmit
+              run: pnpm run types-check
